@@ -144,18 +144,24 @@
       padding-left: 24px;
     }
     .row-top {
-      padding-top: 8px;
-      padding-bottom: 16px;
+      padding-top: 4px;
+      padding-bottom: 8px;
       border-bottom: 1px solid #16130e;
     }
     .row-mid {
-      padding-top: 16px;
-      padding-bottom: 16px;
+      padding-top: 8px;
+      padding-bottom: 8px;
       border-bottom: 1px solid #16130e;
     }
     .row-bot {
-      padding-top: 16px;
-      padding-bottom: 6px;
+      padding-top: 8px;
+      padding-bottom: 4px;
+    }
+    .kicker-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
     }
     .kicker {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -164,7 +170,15 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #b3261e;
-      margin-bottom: 6px;
+    }
+    .location-tag {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #6a6459;
+      text-align: right;
     }
     .headline {
       font-family: Georgia, 'Times New Roman', serif;
@@ -185,6 +199,11 @@
       font-size: 14px;
       line-height: 1.38;
       color: #16130e;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      max-height: 2.76em;
     }
     .subhead::first-letter {
       text-transform: uppercase;
@@ -243,42 +262,60 @@
 
   <main class="grid">
     <article class="card col-left row-top">
-      <div class="kicker">K1 · ANTALYA, TURKEY</div>
+      <div class="kicker-row">
+        <span class="kicker">K1 · CLIMATE SUMMIT</span>
+        <span class="location-tag">ANTALYA</span>
+      </div>
       <h2 class="headline">COP31 ends with no climate pact</h2>
       <div class="card-rule"></div>
       <p class="subhead">EU rejected the final draft over fossil-fuel language; UN chief: 'no ambiguity in the science'.</p>
     </article>
 
     <article class="card col-right row-top">
-      <div class="kicker">K2 · GLOBAL MARKETS</div>
+      <div class="kicker-row">
+        <span class="kicker">K2 · CRYPTO & FINTECH</span>
+        <span class="location-tag">GLOBAL MARKETS</span>
+      </div>
       <h2 class="headline">Bitcoin: two-year low, then a rebound</h2>
       <div class="card-rule"></div>
       <p class="subhead">BTC fell to $55,251 in the AI-led market rout, then climbed back above $60,000 within a day.</p>
     </article>
 
     <article class="card col-left row-mid">
-      <div class="kicker">K3 · IRAN / GULF</div>
+      <div class="kicker-row">
+        <span class="kicker">K3 · CONFLICT & ENERGY</span>
+        <span class="location-tag">IRAN/GULF</span>
+      </div>
       <h2 class="headline">Tankers ablaze in Strait of Hormuz</h2>
       <div class="card-rule"></div>
       <p class="subhead">Gulf escalation: multiple tankers struck; Iran-Gulf tensions widen.</p>
     </article>
 
     <article class="card col-right row-mid">
-      <div class="kicker">K4 · UKRAINE / RUSSIA</div>
+      <div class="kicker-row">
+        <span class="kicker">K4 · WAR IN EUROPE</span>
+        <span class="location-tag">KYIV</span>
+      </div>
       <h2 class="headline">Kyiv strikes; Russian ships hit</h2>
       <div class="card-rule"></div>
       <p class="subhead">Russian air strikes killed 15+ in Kyiv region; Ukraine's naval drones struck two Russian ships, Zelensky confirmed.</p>
     </article>
 
     <article class="card col-left row-bot">
-      <div class="kicker">K5 · UNITED STATES</div>
+      <div class="kicker-row">
+        <span class="kicker">K5 · CONGRESSIONAL ELECTIONS</span>
+        <span class="location-tag">WASHINGTON</span>
+      </div>
       <h2 class="headline">Democrats take record House majority</h2>
       <div class="card-rule"></div>
       <p class="subhead">North Carolina win gives the party its largest US House majority since 1992.</p>
     </article>
 
     <article class="card col-right row-bot">
-      <div class="kicker">K6 · SPACE / SCIENCE</div>
+      <div class="kicker-row">
+        <span class="kicker">K6 · DEEP SPACE EXPLORATION</span>
+        <span class="location-tag">SPACE</span>
+      </div>
       <h2 class="headline">BepiColombo enters Mercury orbit</h2>
       <div class="card-rule"></div>
       <p class="subhead">the joint ESA-JAXA probe arrives after an eight-year cruise.</p>
@@ -287,7 +324,7 @@
 
   <footer class="footer-strip">
     <div class="footer-content">
-      <span>six stories, one day — sources: Reuters, UN News, Euronews, Al Jazeera, AP</span>
+      <span><strong>VERIFIED</strong> — sources: Reuters, UN News, Euronews, Al Jazeera, AP</span>
       <span class="bold-date">22 NOV 2026</span>
     </div>
   </footer>
